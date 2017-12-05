@@ -90,6 +90,7 @@ void MDNSHandler::startResponder(char* hostname)
 class ArduinoCommunicator
 {
   public:
+  ArduinoCommunicator(int RX, int TX);
   private:
 };
 void setup()
