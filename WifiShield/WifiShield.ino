@@ -7,9 +7,17 @@
 class WifiServer
 {
   public:
+  WifiServer(int serverport);
   private:
   ESP8266WebServer _espserver;
 };
+
+WifiServer::WifiServer(int serverport)
+{
+  ESP8266WebServer server(serverport);
+  _espserver = server;
+}
+
 class WifiConnection
 {
   public:
