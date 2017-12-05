@@ -87,6 +87,11 @@ void MDNSHandler::startResponder(char* hostname)
   }
 }
 
+class ArduinoCommunicator
+{
+  public:
+  private:
+};
 void setup()
 {
 }
