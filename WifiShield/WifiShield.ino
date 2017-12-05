@@ -165,5 +165,12 @@ void setup()
 
 void loop()
 {
-  server.Update();
+  if (WiFi.status() != WL_CONNECTED)
+  {
+    connection.wifiConnect();  
+  }
+  else
+  {
+    server.runServer();
+  }
 }
