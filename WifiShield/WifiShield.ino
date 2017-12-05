@@ -92,6 +92,7 @@ class ArduinoCommunicator
   public:
   ArduinoCommunicator(int RX, int TX);
   private:
+  SoftwareSerial _arduinoserial;
 };
 void setup()
 {
