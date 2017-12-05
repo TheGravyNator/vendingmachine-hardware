@@ -107,4 +107,5 @@ void setup()
 
 void loop()
 {
+  server.Update();
 }
