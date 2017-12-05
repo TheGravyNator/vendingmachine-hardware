@@ -133,6 +133,7 @@ class POSTReceiver
   POSTReceiver(WifiServer server);
   void receivePost();
   private:
+  WifiServer _server;
 };
 
 void POSTReceiver::receivePost()
