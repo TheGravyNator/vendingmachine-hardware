@@ -1,3 +1,12 @@
+/**
+ *  Name: WifiShield.ino
+ *  Purpose: The main code for the Wifi shield of the 23G vending machine project. 
+ *  It establishes connection with the API and communicates with the arduino to control the vending machine.
+ * 
+ *  @author: Christian Slabbekoorn
+ *  @date: December 5th, 2017
+ **/
+
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
