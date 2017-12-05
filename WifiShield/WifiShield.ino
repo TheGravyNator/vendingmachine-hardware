@@ -75,6 +75,7 @@ class MDNSHandler
   public:
   void startResponder(char* hostname);
   private:
+  MDNSResponder _mdnsresponder;
 };
 
 void MDNSHandler::startResponder(char* hostname)
