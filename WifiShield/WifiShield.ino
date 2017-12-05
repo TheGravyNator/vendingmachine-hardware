@@ -73,8 +73,18 @@ void WifiConnection::wifiConnect()
 class MDNSHandler
 {
   public:
+  void startResponder(char* hostname);
   private:
 };
+
+void MDNSHandler::startResponder(char* hostname)
+{
+  if (_mdnsresponder.begin(hostname, WiFi.localIP()))
+  {
+    Serial.println("MDNS responder started");
+    Serial.print("Connect to http://VendingMachineAPI.local.");
+  }
+}
 
 void setup()
 {
