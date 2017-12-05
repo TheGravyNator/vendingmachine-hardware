@@ -121,6 +121,12 @@ ArduinoCommunicator::ArduinoCommunicator(SoftwareSerial* arduinoserial)
 {
   _arduinoserial = arduinoserial;
 }
+
+void ArduinoCommunicator::beginSerial(int baud)
+{
+  _arduinoserial->begin(baud);
+}
+
 WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 WifiServer server(80);
 MDNSHandler mdns;
