@@ -7,8 +7,14 @@
 class WifiConnection
 {
   public:
+  WifiConnection(char* ssid, char* password);
   char* _wifissid; //The SSID of the network
   char* _wifipassword; //The password of the network
+WifiConnection::WifiConnection(char* ssid, char* password)
+{
+  _wifissid = ssid;
+  _wifipassword = password;
+}
   private:
 };
 
