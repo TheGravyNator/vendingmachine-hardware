@@ -111,11 +111,16 @@ void MDNSHandler::startResponder(char* hostname)
 class ArduinoCommunicator
 {
   public:
-  ArduinoCommunicator(int RX, int TX);
+  ArduinoCommunicator(SoftwareSerial* arduinoserial);
+  void beginSerial(int baud);
   private:
-  SoftwareSerial _arduinoserial;
+  SoftwareSerial* _arduinoserial;
 };
 
+ArduinoCommunicator::ArduinoCommunicator(SoftwareSerial* arduinoserial)
+{
+  _arduinoserial = arduinoserial;
+}
 WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 WifiServer server(80);
 MDNSHandler mdns;
