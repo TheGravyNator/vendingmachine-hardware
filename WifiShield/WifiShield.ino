@@ -4,6 +4,7 @@
 #include <ESP8266mDNS.h>
 #include <SoftwareSerial.h>
 #include "Secret.h"
+
 class WifiServer
 {
   public:
@@ -50,6 +51,7 @@ WifiConnection::WifiConnection(char* ssid, char* password)
   _wifissid = ssid;
   _wifipassword = password;
 }
+
 void WifiConnection::wifiConnect()
 {
   WiFi.disconnect();
@@ -94,9 +96,11 @@ class ArduinoCommunicator
   private:
   SoftwareSerial _arduinoserial;
 };
+
 WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 WifiServer server(80);
 MDNSHandler mdns;
+
 void setup()
 {
   Serial.begin(115200);
