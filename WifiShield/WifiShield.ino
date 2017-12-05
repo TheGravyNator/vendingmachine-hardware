@@ -102,6 +102,7 @@ void setup()
   Serial.begin(115200);
   connection.wifiConnect();
   server.startServer();
+  mdns.startResponder("VendingMachineAPI");
 }
 
 void loop()
