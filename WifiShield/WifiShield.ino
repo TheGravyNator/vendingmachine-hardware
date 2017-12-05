@@ -127,6 +127,12 @@ void ArduinoCommunicator::beginSerial(int baud)
   _arduinoserial->begin(baud);
 }
 
+class POSTReceiver
+{
+  public:
+  private:
+};
+
 WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 WifiServer server(80);
 MDNSHandler mdns;
