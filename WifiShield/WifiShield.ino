@@ -40,8 +40,11 @@ class WifiConnection
   public:
   WifiConnection(char* ssid, char* password);
   void wifiConnect();
+  private:
   char* _wifissid; //The SSID of the network
   char* _wifipassword; //The password of the network
+};
+
 WifiConnection::WifiConnection(char* ssid, char* password)
 {
   _wifissid = ssid;
@@ -67,6 +70,9 @@ void WifiConnection::wifiConnect()
   Serial.println(WiFi.localIP());
 }
 
+class MDNSHandler
+{
+  public:
   private:
 };
 
