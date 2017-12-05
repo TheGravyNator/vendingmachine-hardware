@@ -96,6 +96,7 @@ class ArduinoCommunicator
 };
 WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 WifiServer server(80);
+MDNSHandler mdns;
 void setup()
 {
 }
