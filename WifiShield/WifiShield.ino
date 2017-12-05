@@ -8,6 +8,7 @@ class WifiServer
 {
   public:
   WifiServer(int serverport);
+  void startServer();
   private:
   ESP8266WebServer _espserver;
 };
@@ -16,6 +17,15 @@ WifiServer::WifiServer(int serverport)
 {
   ESP8266WebServer server(serverport);
   _espserver = server;
+}
+
+void WifiServer::startServer()
+{
+  _espserver.on("/", [&]()
+  {
+    _espserver.send(200, "text/plain", "Welcome to the 23G Soda API!");
+  });
+  _espserver.begin();
 }
 
 class WifiConnection
