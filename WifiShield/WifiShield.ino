@@ -130,8 +130,22 @@ void ArduinoCommunicator::beginSerial(int baud)
 class POSTReceiver
 {
   public:
+  POSTReceiver(WifiServer server);
   private:
 };
+
+void POSTReceiver::receivePost()
+{
+  /*if (_server.hasArg("plain"))
+  {
+    _server.send(400, "text/plain", "Body not received!")  
+  }  
+  else
+  {
+    Serial.println("Body:" + server.arg("plain"));
+    _server.send(200, "text/plain", "Body received!");
+  }*/
+}
 
 WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 WifiServer server(80);
