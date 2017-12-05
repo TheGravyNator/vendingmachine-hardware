@@ -4,6 +4,12 @@
 #include <ESP8266mDNS.h>
 #include <SoftwareSerial.h>
 #include "Secret.h"
+class WifiConnection
+{
+  public:
+  private:
+};
+
 void setup()
 {
 }
