@@ -101,6 +101,7 @@ void setup()
 {
   Serial.begin(115200);
   connection.wifiConnect();
+  server.startServer();
 }
 
 void loop()
