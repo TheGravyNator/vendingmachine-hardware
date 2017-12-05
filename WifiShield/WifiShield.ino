@@ -37,7 +37,15 @@ void WifiServer::startServer()
 {
   _espserver.on("/", [&]()
   {
-    _espserver.send(200, "text/plain", "Welcome to the 23G Soda API!");
+    if (_espserver.hasArg("plain") == false)
+    {
+      _espserver.send(200, "text/plain", "Body not received");
+    }
+    String message = "Body received:\n";
+    message += _espserver.arg("plain");
+    message += "\n";
+    _espserver.send(200, "text/plain", "Body received!");
+    Serial.println(message);
   });
   _espserver.begin();
 }
@@ -46,7 +54,6 @@ void WifiServer::runServer()
 {
   _espserver.handleClient();
 }
-
 
 class WifiConnection
 {
