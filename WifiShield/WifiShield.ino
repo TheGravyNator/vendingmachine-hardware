@@ -94,6 +94,7 @@ class ArduinoCommunicator
   private:
   SoftwareSerial _arduinoserial;
 };
+WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 void setup()
 {
 }
