@@ -152,6 +152,7 @@ void POSTReceiver::receivePost()
 WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 WifiServer server(80);
 MDNSHandler mdns;
+ArduinoCommunicator arduinocomm(new SoftwareSerial(13, 12));
 
 void setup()
 {
