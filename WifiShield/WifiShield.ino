@@ -7,6 +7,8 @@
 class WifiConnection
 {
   public:
+  char* _wifissid; //The SSID of the network
+  char* _wifipassword; //The password of the network
   private:
 };
 
