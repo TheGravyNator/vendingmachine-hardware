@@ -131,6 +131,7 @@ class POSTReceiver
 {
   public:
   POSTReceiver(WifiServer server);
+  void receivePost();
   private:
 };
 
