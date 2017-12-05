@@ -8,6 +8,7 @@ class WifiServer
 {
   public:
   private:
+  ESP8266WebServer _espserver;
 };
 class WifiConnection
 {
