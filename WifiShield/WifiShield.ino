@@ -22,7 +22,7 @@ class WifiServer
   public:
   WifiServer(int serverport);
   void startServer();
-  void Update();
+  void runServer();
   private:
   ESP8266WebServer _espserver;
 };
@@ -42,7 +42,7 @@ void WifiServer::startServer()
   _espserver.begin();
 }
 
-void WifiServer::Update()
+void WifiServer::runServer()
 {
   _espserver.handleClient();
 }
