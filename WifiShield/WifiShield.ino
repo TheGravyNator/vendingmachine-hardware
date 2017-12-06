@@ -16,25 +16,6 @@
 
 //Internal header files
 #include "Secret.h"
-class ArduinoCommunicator
-{
-  public:
-  ArduinoCommunicator(SoftwareSerial* arduinoserial);
-  void beginSerial(int baud);
-  private:
-  SoftwareSerial* _arduinoserial;
-};
-
-ArduinoCommunicator::ArduinoCommunicator(SoftwareSerial* arduinoserial)
-{
-  _arduinoserial = arduinoserial;
-}
-
-void ArduinoCommunicator::beginSerial(int baud)
-{
-  _arduinoserial->begin(baud);
-}
-
 class POSTReceiver
 {
   public:
@@ -58,6 +39,7 @@ void POSTReceiver::receivePost()
 }
 #include "WifiConnection.h"
 #include "MDNSHandler.h"
+#include "ArduinoCommunicator.h"
 
 WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 WifiServer server(80);
