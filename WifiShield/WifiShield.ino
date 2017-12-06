@@ -16,45 +16,6 @@
 
 //Internal header files
 #include "Secret.h"
-
-class WifiServer
-{
-  public:
-  WifiServer(int serverport);
-  void startServer();
-  void runServer();
-  private:
-  ESP8266WebServer _espserver;
-};
-
-WifiServer::WifiServer(int serverport)
-{
-  ESP8266WebServer server(serverport);
-  _espserver = server;
-}
-
-void WifiServer::startServer()
-{
-  _espserver.on("/", [&]()
-  {
-    if (_espserver.hasArg("plain") == false)
-    {
-      _espserver.send(200, "text/plain", "Body not received");
-    }
-    String message = "Body received:\n";
-    message += _espserver.arg("plain");
-    message += "\n";
-    _espserver.send(200, "text/plain", "Body received!");
-    Serial.println(message);
-  });
-  _espserver.begin();
-}
-
-void WifiServer::runServer()
-{
-  _espserver.handleClient();
-}
-
 class WifiConnection
 {
   public:
