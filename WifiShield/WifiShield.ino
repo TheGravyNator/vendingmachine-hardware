@@ -16,30 +16,11 @@
 
 //Internal header files
 #include "Secret.h"
-class POSTReceiver
-{
-  public:
-  POSTReceiver(WifiServer server);
-  void receivePost();
-  private:
-  WifiServer _server;
-};
-
-void POSTReceiver::receivePost()
-{
-  /*if (_server.hasArg("plain"))
-  {
-    _server.send(400, "text/plain", "Body not received!")  
-  }  
-  else
-  {
-    Serial.println("Body:" + server.arg("plain"));
-    _server.send(200, "text/plain", "Body received!");
-  }*/
-}
 #include "WifiConnection.h"
 #include "MDNSHandler.h"
 #include "ArduinoCommunicator.h"
+#include "WifiServer.h"
+#include "POSTReceiver.h"
 
 WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 WifiServer server(80);
