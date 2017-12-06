@@ -16,23 +16,6 @@
 
 //Internal header files
 #include "Secret.h"
-class MDNSHandler
-{
-  public:
-  void startResponder(char* hostname);
-  private:
-  MDNSResponder _mdnsresponder;
-};
-
-void MDNSHandler::startResponder(char* hostname)
-{
-  if (_mdnsresponder.begin(hostname, WiFi.localIP()))
-  {
-    Serial.println("MDNS responder started");
-    Serial.print("Connect to http://VendingMachineAPI.local.");
-  }
-}
-
 class ArduinoCommunicator
 {
   public:
@@ -74,6 +57,7 @@ void POSTReceiver::receivePost()
   }*/
 }
 #include "WifiConnection.h"
+#include "MDNSHandler.h"
 
 WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 WifiServer server(80);
