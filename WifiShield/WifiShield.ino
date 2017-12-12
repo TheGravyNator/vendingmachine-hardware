@@ -31,7 +31,7 @@ POSTReceiver receiver(server);
 void setup()
 {
   Serial.begin(115200);
-  arduinocomm.beginSerial(115200);
+  arduinocomm.beginSerial(new SoftwareSerial(13, 12), 115200);
   connection.wifiConnect();
   server.startServer(receiver);
   mdns.startResponder("VendingMachineAPI");

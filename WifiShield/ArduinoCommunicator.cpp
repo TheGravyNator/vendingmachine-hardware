@@ -7,10 +7,9 @@ ArduinoCommunicator::ArduinoCommunicator()
   _arduinocomm = NULL;
 }
 
-void ArduinoCommunicator::beginSerial(SoftwareSerial* serial)
+void ArduinoCommunicator::beginSerial(SoftwareSerial* serial, int baud)
 {
-  _arduinoserial->begin(baud);
   _arduinocomm = serial;
-}
+  _arduinocomm->begin(baud);
 }
 

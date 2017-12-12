@@ -8,7 +8,7 @@ class ArduinoCommunicator
 {
   public:
   ArduinoCommunicator();
-  void beginSerial(SoftwareSerial* serial);
+  void beginSerial(SoftwareSerial* serial, int baud);
   private:
   SoftwareSerial* _arduinocomm;
 };
