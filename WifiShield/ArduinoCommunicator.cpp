@@ -13,3 +13,8 @@ void ArduinoCommunicator::beginSerial(SoftwareSerial* serial, int baud)
   _arduinocomm->begin(baud);
 }
 
+void ArduinoCommunicator::sendOrder(String message)
+{
+  _arduinocomm->println(message);
+  Serial.println(message);
+}
