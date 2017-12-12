@@ -33,7 +33,8 @@ void setup()
   Serial.begin(115200);
   arduinocomm.beginSerial(new SoftwareSerial(13, 12), 115200);
   connection.wifiConnect();
-  server.startServer(receiver);
+  server.setArduinoCommunicator(arduinocomm);
+  server.startServer();
   mdns.startResponder("VendingMachineAPI");
 }
 
