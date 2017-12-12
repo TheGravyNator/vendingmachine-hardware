@@ -8,6 +8,7 @@
 class JSONParser
 {
   public: 
+  struct SodaRequest parseJSON(String json_string); 
 };
 
 #endif
