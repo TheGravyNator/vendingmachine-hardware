@@ -2,8 +2,10 @@
 #define WifiServer_h
 
 #include "Arduino.h"
-#include "POSTReceiver.h"
+#include "JSONParser.h"
+#include "ArduinoCommunicator.h"
 #include <ESP8266WebServer.h>
+#include <SoftwareSerial.h>
 
 class POSTReceiver;
 

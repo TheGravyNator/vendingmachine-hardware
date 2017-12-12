@@ -1,6 +1,8 @@
 #include "Arduino.h"
 #include "WifiServer.h"
-#include "POSTReceiver.h"
+#include "JSONParser.h"
+#include "ArduinoCommunicator.h"
+#include <SoftwareSerial.h>
 
 WifiServer::WifiServer(int serverport)
 {
