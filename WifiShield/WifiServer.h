@@ -13,7 +13,6 @@ class WifiServer
 {
   public:
   WifiServer(int serverport);
-  void startServer(POSTReceiver receiver);
   void runServer();
   String getArgument(String argument);
   private:

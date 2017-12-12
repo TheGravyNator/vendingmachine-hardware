@@ -10,7 +10,6 @@ WifiServer::WifiServer(int serverport)
   _espserver = server;
 }
 
-void WifiServer::startServer(POSTReceiver receiver)
 {
   _espserver.on("/", [&]()
   {
