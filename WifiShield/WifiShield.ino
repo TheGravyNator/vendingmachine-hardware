@@ -20,7 +20,7 @@
 #include "MDNSHandler.h"
 #include "ArduinoCommunicator.h"
 #include "WifiServer.h"
-#include "POSTReceiver.h"
+#include "JSONParser.h"
 
 WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 WifiServer server(80);
