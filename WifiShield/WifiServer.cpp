@@ -4,10 +4,11 @@
 #include "ArduinoCommunicator.h"
 #include <SoftwareSerial.h>
 
-WifiServer::WifiServer(int serverport)
+WifiServer::WifiServer(int serverport, JSONParser jsonparser) 
 {
   ESP8266WebServer server(serverport);
   _espserver = server;
+  _jsonparser = jsonparser;
 }
 
 {

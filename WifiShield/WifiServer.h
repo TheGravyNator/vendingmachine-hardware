@@ -12,11 +12,12 @@ class POSTReceiver;
 class WifiServer
 {
   public:
-  WifiServer(int serverport);
+  WifiServer(int serverport, JSONParser jsonparser);
   void runServer();
   String getArgument(String argument);
   private:
   ESP8266WebServer _espserver;
+  JSONParser _jsonparser;
 };
 
 #endif
