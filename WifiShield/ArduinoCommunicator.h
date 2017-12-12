@@ -7,10 +7,10 @@
 class ArduinoCommunicator
 {
   public:
-  ArduinoCommunicator(SoftwareSerial* arduinoserial);
-  void beginSerial(int baud);
+  ArduinoCommunicator();
+  void beginSerial(SoftwareSerial* serial);
   private:
-  SoftwareSerial* _arduinoserial;
+  SoftwareSerial* _arduinocomm;
 };
 
 #endif

@@ -2,13 +2,15 @@
 #include "ArduinoCommunicator.h"
 #include <SoftwareSerial.h>
 
-ArduinoCommunicator::ArduinoCommunicator(SoftwareSerial* arduinoserial)
+ArduinoCommunicator::ArduinoCommunicator()
 {
-  _arduinoserial = arduinoserial;
+  _arduinocomm = NULL;
 }
 
-void ArduinoCommunicator::beginSerial(int baud)
+void ArduinoCommunicator::beginSerial(SoftwareSerial* serial)
 {
   _arduinoserial->begin(baud);
+  _arduinocomm = serial;
+}
 }
 
