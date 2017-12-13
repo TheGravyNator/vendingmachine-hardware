@@ -37,6 +37,7 @@ void setup()
   relay3.init();
   relay4.init();
   relay5.init();
+  orderhandler.init(&relay1, &relay2, &relay3, &relay4, &relay5);
 }
 
 void loop() 
