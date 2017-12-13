@@ -10,6 +10,11 @@ class OrderHandler
 {
   public:
   private:
+  RelayHiLo* _relay1;
+  RelayHiLo* _relay2;
+  RelayHiLo* _relay3;
+  RelayHiLo* _relay4;
+  Relay* _relay5;
 };
 
 #endif
