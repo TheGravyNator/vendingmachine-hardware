@@ -30,6 +30,7 @@ void setup()
 {
   
 
+  Serial.begin(115200);
   shieldcomm.beginSerial(new SoftwareSerial(RX_SERIAL, TX_SERIAL), 9600);
 }
 
