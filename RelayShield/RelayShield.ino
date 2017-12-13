@@ -22,6 +22,8 @@ RelayHiLo relay2(RELAY2_HI, RELAY2_LO);
 RelayHiLo relay3(RELAY3_HI, RELAY3_LO);
 RelayHiLo relay4(RELAY4_HI, RELAY4_LO);
 Relay relay5(RELAY5);
+OrderHandler orderhandler;
+
 void setup() 
 {
   
