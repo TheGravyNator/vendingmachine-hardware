@@ -13,3 +13,12 @@ void RelayHiLo::init()
   pinMode(_pin_lo, OUTPUT);
 }
 
+void RelayHiLo::trigger(int delay_amount)
+{
+  digitalWrite(_pin_hi, HIGH);
+  digitalWrite(_pin_lo, LOW);
+  delay(delay_amount);
+  digitalWrite(_pin_hi, LOW);
+  digitalWrite(_pin_lo, HIGH);
+  delay(delay_amount);
+}
