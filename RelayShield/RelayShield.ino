@@ -7,6 +7,15 @@
  *  @date: December 13th, 2017
  **/
 
+#include <SoftwareSerial.h>
+
+#include "ShieldCommunicator.h"
+#include "Relay.h"
+#include "RelayHiLo.h"
+#include "Constants.h"
+#include "SodaRequest.h"
+#include "OrderHandler.h"
+
 void setup() 
 {
   
