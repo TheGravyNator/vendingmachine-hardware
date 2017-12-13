@@ -28,8 +28,6 @@ struct SodaRequest order;
 
 void setup() 
 {
-  
-
   Serial.begin(115200);
   shieldcomm.beginSerial(new SoftwareSerial(RX_SERIAL, TX_SERIAL), 9600);
   relay1.init();
@@ -42,8 +40,6 @@ void setup()
 
 void loop() 
 {
-  
-
   order = shieldcomm.receiveOrder();
   if(order.soda_type != "" && order.soda_amount != 0)
   {
