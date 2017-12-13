@@ -31,7 +31,7 @@ MDNSHandler mdns;
 void setup()
 {
   Serial.begin(115200);
-  arduinocomm.beginSerial(new SoftwareSerial(13, 12), 115200);
+  arduinocomm.beginSerial(new SoftwareSerial(13, 12), 9600);
   connection.wifiConnect();
   server.setArduinoCommunicator(arduinocomm);
   server.startServer();
