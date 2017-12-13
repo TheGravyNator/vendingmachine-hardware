@@ -7,6 +7,7 @@ class Relay
 {
   public:
   Relay(int pin);
+  void init();
   private:
 };
 
