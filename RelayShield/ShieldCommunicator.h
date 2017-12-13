@@ -8,6 +8,7 @@
 class ShieldCommunicator
 {
   public:
+  ShieldCommunicator();
   private:
 };
 
