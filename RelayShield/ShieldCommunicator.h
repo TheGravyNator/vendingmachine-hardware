@@ -9,6 +9,7 @@ class ShieldCommunicator
 {
   public:
   ShieldCommunicator();
+  void beginSerial(SoftwareSerial* serial, int baud);
   private:
   SoftwareSerial* _shieldcomm;
 };

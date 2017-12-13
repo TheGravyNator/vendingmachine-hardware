@@ -8,3 +8,9 @@ ShieldCommunicator::ShieldCommunicator()
   _shieldcomm = NULL;
 }
 
+void ShieldCommunicator::beginSerial(SoftwareSerial* serial, int baud)
+{
+  _shieldcomm = serial;
+  _shieldcomm->begin(baud);
+}
+
