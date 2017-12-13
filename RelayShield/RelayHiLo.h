@@ -7,6 +7,7 @@ class RelayHiLo
 {
   public:
   RelayHiLo(int pin_hi, int pin_lo);
+  void init();
   private:
   int _pin_hi;
   int _pin_lo;
