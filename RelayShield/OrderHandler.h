@@ -10,6 +10,7 @@ class OrderHandler
 {
   public:
   void init(RelayHiLo* relay1, RelayHiLo* relay2, RelayHiLo* relay3, RelayHiLo* relay4, Relay* relay5);
+  void executeOrder(struct SodaRequest request);
   private:
   RelayHiLo* _relay1;
   RelayHiLo* _relay2;
