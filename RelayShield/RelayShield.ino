@@ -16,6 +16,7 @@
 #include "SodaRequest.h"
 #include "OrderHandler.h"
 
+ShieldCommunicator shieldcomm;
 void setup() 
 {
   
