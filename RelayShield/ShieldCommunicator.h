@@ -10,6 +10,7 @@ class ShieldCommunicator
   public:
   ShieldCommunicator();
   private:
+  SoftwareSerial* _shieldcomm;
 };
 
 #endif
