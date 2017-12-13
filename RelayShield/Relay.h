@@ -10,6 +10,7 @@ class Relay
   void init();
   void trigger(int delay_amount);
   private:
+  int _pin;
 };
 
 #endif
