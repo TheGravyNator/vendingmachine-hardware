@@ -32,6 +32,11 @@ void setup()
 
   Serial.begin(115200);
   shieldcomm.beginSerial(new SoftwareSerial(RX_SERIAL, TX_SERIAL), 9600);
+  relay1.init();
+  relay2.init();
+  relay3.init();
+  relay4.init();
+  relay5.init();
 }
 
 void loop() 
