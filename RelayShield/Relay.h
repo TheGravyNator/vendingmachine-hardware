@@ -6,6 +6,7 @@
 class Relay
 {
   public:
+  Relay(int pin);
   private:
 };
 
