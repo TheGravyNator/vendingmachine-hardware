@@ -44,4 +44,10 @@ void loop()
 {
   
 
+  order = shieldcomm.receiveOrder();
+  if(order.soda_type != "" && order.soda_amount != 0)
+  {
+    Serial.println(order.soda_type);
+    orderhandler.executeOrder(order);
+  }
 }
