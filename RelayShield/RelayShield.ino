@@ -31,6 +31,8 @@ QueueArray <struct SodaRequest> queue;
 struct SodaRequest order;
 
 void receiveOrder();
+void dispenseOrder();
+
 void setup() 
 {
   Serial.begin(115200);
@@ -60,3 +62,13 @@ void receiveOrder()
     queue.enqueue(order);
   }
 }
+
+void dispenseOrder()
+{
+  while(!queue.isEmpty())
+  {
+    orderhandler.executeOrder(queue.dequeue());  
+  }
+}
+
+
