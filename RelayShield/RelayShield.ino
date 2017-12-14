@@ -26,6 +26,7 @@ RelayHiLo relay4(RELAY4_HI, RELAY4_LO);
 Relay relay5(RELAY5);
 OrderHandler orderhandler;
 Tasker tasker;
+QueueArray <struct SodaRequest> queue;
 
 struct SodaRequest order;
 
@@ -51,5 +52,6 @@ void loop()
   {
     Serial.println(order.soda_type);
     orderhandler.executeOrder(order);
+    queue.enqueue(order);
   }
 }
