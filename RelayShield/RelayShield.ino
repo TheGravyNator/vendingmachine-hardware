@@ -8,6 +8,8 @@
  **/
 
 #include <SoftwareSerial.h>
+#include <Tasker.h>
+#include "QueueArray.h"
 
 #include "ShieldCommunicator.h"
 #include "Relay.h"
