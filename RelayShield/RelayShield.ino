@@ -25,6 +25,7 @@ RelayHiLo relay3(RELAY3_HI, RELAY3_LO);
 RelayHiLo relay4(RELAY4_HI, RELAY4_LO);
 Relay relay5(RELAY5);
 OrderHandler orderhandler;
+Tasker tasker;
 
 struct SodaRequest order;
 
@@ -38,6 +39,9 @@ void setup()
   relay4.init();
   relay5.init();
   orderhandler.init(&relay1, &relay2, &relay3, &relay4, &relay5);
+  tasker.setInterval(receiveOrder, 1);
+  tasker.setInterval(dispenseOrder, 10);
+  tasker.run();
 }
 
 void loop() 
