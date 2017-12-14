@@ -1,4 +1,4 @@
- /**
+/**
  *  Name: RelayShield.ino
  *  Purpose: The main code for the Relay shield of the 23G vending machine project.
  *  It receives input from the WifiShield and controls the vending machine. 
