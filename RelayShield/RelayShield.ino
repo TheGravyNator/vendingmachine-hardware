@@ -24,7 +24,6 @@ RelayHiLo relay3(RELAY3_HI, RELAY3_LO);
 RelayHiLo relay4(RELAY4_HI, RELAY4_LO);
 Relay relay5(RELAY5);
 OrderHandler orderhandler;
-QueueArray <struct SodaRequest> queue;
 DispensingIndicator dispensing(DISPENSING_INDICATOR, false);
 
 struct SodaRequest order;
