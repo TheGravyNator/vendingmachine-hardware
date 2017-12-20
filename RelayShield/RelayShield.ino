@@ -28,9 +28,6 @@ QueueArray <struct SodaRequest> queue;
 
 struct SodaRequest order;
 
-void receiveOrder();
-void dispenseOrder();
-
 void setup() 
 {
   Serial.begin(115200);
@@ -45,25 +42,17 @@ void setup()
 
 void loop() 
 {
-  
-}
-
-void receiveOrder()
-{
-  order = shieldcomm.receiveOrder();
-  if(order.soda_type != "" && order.soda_amount != 0)
+  if(shieldcomm.incoming())
   {
-    Serial.println(order.soda_type + " " + order.soda_amount);
-    queue.enqueue(order);
+    order = shieldcomm.receiveOrder();
+    if(order.soda_type != "" && order.soda_amount != 0)
+    {
+      dispensing.setIndicator(true);
+      orderhandler.executeOrder(order); 
+      dispensing.setIndicator(false);
+    }
   }
 }
 
-void dispenseOrder()
-{
-  while(!queue.isEmpty())
-  {
-    orderhandler.executeOrder(queue.dequeue());  
-  }
-}
 
 
