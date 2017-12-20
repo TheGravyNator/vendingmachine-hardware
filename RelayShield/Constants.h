@@ -11,3 +11,7 @@
 
 #define RX_SERIAL 10
 #define TX_SERIAL 11
+
+#define DISPENSING_INDICATOR 2
+
+#define BAUD_RATE 9600
