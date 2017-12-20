@@ -21,6 +21,9 @@
 #include "ArduinoCommunicator.h"
 #include "WifiServer.h"
 #include "JSONParser.h"
+#include "QueueList.h"
+#include "Constants.h"
+
 
 WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 JSONParser jsonparser;
