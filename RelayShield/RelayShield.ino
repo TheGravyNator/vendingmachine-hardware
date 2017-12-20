@@ -31,8 +31,8 @@ struct SodaRequest order;
 
 void setup() 
 {
-  Serial.begin(115200);
-  shieldcomm.beginSerial(new SoftwareSerial(RX_SERIAL, TX_SERIAL), 9600);
+  Serial.begin(BAUD_RATE);
+  shieldcomm.beginSerial(new SoftwareSerial(RX_SERIAL, TX_SERIAL), BAUD_RATE);
   relay1.init();
   relay2.init();
   relay3.init();
