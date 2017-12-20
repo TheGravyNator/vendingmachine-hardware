@@ -30,12 +30,14 @@ WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 JSONParser jsonparser;
 WifiServer server(SERVER_PORT, jsonparser, &queue);
 MDNSHandler mdns;
+DispensingIndicator dispensing(DISPENSING_INDICATOR);
 ArduinoCommunicator arduinocomm;
 
 void setup()
 {
   Serial.begin(BAUD_RATE);
   arduinocomm.beginSerial(new SoftwareSerial(RX_SERIAL, TX_SERIAL), BAUD_RATE);
+  arduinocomm.setDispensingIndicator(&dispensing);
   connection.wifiConnect();
   server.startServer();
   mdns.startResponder("VendingMachineAPI");
