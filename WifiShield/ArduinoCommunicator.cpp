@@ -1,5 +1,7 @@
 #include "Arduino.h"
 #include "ArduinoCommunicator.h"
+#include "SodaRequest.h"
+#include "DispensingIndicator.h"
 #include <SoftwareSerial.h>
 
 ArduinoCommunicator::ArduinoCommunicator()

@@ -2,6 +2,8 @@
 #define ArduinoCommunicator_h
 
 #include "Arduino.h"
+#include "SodaRequest.h"
+#include "DispensingIndicator.h"
 #include <SoftwareSerial.h>
 
 class ArduinoCommunicator
