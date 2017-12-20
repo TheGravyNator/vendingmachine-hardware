@@ -24,6 +24,7 @@
 #include "QueueList.h"
 #include "Constants.h"
 
+QueueList <struct SodaRequest> queue;
 
 WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 JSONParser jsonparser;
@@ -50,5 +51,14 @@ void loop()
   else
   {
     server.runServer();
+    if(dispensing.getIndicator() == false)
+    {
+      if(!queue.isEmpty())
+      {
+        delay(10);
+        struct SodaRequest queueorder = queue.pop(); 
+        arduinocomm.sendOrder(queueorder);
+      }
+    }
   }
 }
