@@ -25,6 +25,7 @@ RelayHiLo relay4(RELAY4_HI, RELAY4_LO);
 Relay relay5(RELAY5);
 OrderHandler orderhandler;
 QueueArray <struct SodaRequest> queue;
+DispensingIndicator dispensing(DISPENSING_INDICATOR, false);
 
 struct SodaRequest order;
 
@@ -38,6 +39,7 @@ void setup()
   relay4.init();
   relay5.init();
   orderhandler.init(&relay1, &relay2, &relay3, &relay4, &relay5);
+  dispensing.init();
 }
 
 void loop() 
