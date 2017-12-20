@@ -11,6 +11,7 @@ class ShieldCommunicator
   ShieldCommunicator();
   void beginSerial(SoftwareSerial* serial, int baud);
   struct SodaRequest receiveOrder();
+  bool incoming();
   private:
   SoftwareSerial* _shieldcomm;
 };

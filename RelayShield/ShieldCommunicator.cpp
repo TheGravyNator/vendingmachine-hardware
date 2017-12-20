@@ -24,3 +24,12 @@ struct SodaRequest ShieldCommunicator::receiveOrder()
   }
   return request;
 }
+
+bool ShieldCommunicator::incoming()
+{
+  if(_shieldcomm->available() > 0)
+  {
+    return true;  
+  }  
+  return false;
+}
