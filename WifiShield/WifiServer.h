@@ -3,7 +3,6 @@
 
 #include "Arduino.h"
 #include "JSONParser.h"
-#include "ArduinoCommunicator.h"
 #include <ESP8266WebServer.h>
 #include <SoftwareSerial.h>
 
@@ -14,12 +13,10 @@ class WifiServer
   public:
   WifiServer(int serverport, JSONParser jsonparser);
   void startServer();
-  void setArduinoCommunicator(ArduinoCommunicator arduinocomm);
   void runServer();
   private:
   ESP8266WebServer _espserver;
   JSONParser _jsonparser;
-  ArduinoCommunicator _arduinocomm;
 };
 
 #endif

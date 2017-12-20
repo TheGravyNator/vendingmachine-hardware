@@ -1,19 +1,16 @@
 #include "Arduino.h"
 #include "WifiServer.h"
 #include "JSONParser.h"
-#include "ArduinoCommunicator.h"
+#include "SodaRequest.h"
+#include "QueueList.h"
 #include <SoftwareSerial.h>
 
-WifiServer::WifiServer(int serverport, JSONParser jsonparser) 
+WifiServer::WifiServer(int serverport, JSONParser jsonparser, QueueList <struct SodaRequest>* queue) 
 {
   ESP8266WebServer server(serverport);
   _espserver = server;
   _jsonparser = jsonparser;
-}
-
-void WifiServer::setArduinoCommunicator(ArduinoCommunicator arduinocomm)
-{
-  _arduinocomm = arduinocomm;
+  _queue = queue;
 }
 
 void WifiServer::startServer()

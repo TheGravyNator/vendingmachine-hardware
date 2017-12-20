@@ -28,16 +28,15 @@ QueueList <struct SodaRequest> queue;
 
 WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 JSONParser jsonparser;
-ArduinoCommunicator arduinocomm;
 WifiServer server(SERVER_PORT, jsonparser, &queue);
 MDNSHandler mdns;
+ArduinoCommunicator arduinocomm;
 
 void setup()
 {
   Serial.begin(BAUD_RATE);
   arduinocomm.beginSerial(new SoftwareSerial(RX_SERIAL, TX_SERIAL), BAUD_RATE);
   connection.wifiConnect();
-  server.setArduinoCommunicator(arduinocomm);
   server.startServer();
   mdns.startResponder("VendingMachineAPI");
 }
