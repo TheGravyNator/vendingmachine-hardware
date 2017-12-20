@@ -20,7 +20,6 @@ struct SodaRequest ShieldCommunicator::receiveOrder()
   while (_shieldcomm->available() > 0)
   {
     request.soda_type = _shieldcomm->readStringUntil(':');
-    _shieldcomm->read();
     request.soda_amount = _shieldcomm->readStringUntil('\n').toInt();
   }
   return request;
