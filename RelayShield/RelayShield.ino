@@ -8,8 +8,6 @@
  **/
 
 #include <SoftwareSerial.h>
-#include <Tasker.h>
-#include "QueueArray.h"
 
 #include "ShieldCommunicator.h"
 #include "Relay.h"
@@ -17,6 +15,7 @@
 #include "Constants.h"
 #include "SodaRequest.h"
 #include "OrderHandler.h"
+#include "DispensingIndicator.h"
 
 ShieldCommunicator shieldcomm;
 RelayHiLo relay1(RELAY1_HI, RELAY1_LO);
