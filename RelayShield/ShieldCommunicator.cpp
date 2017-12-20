@@ -33,3 +33,8 @@ bool ShieldCommunicator::incoming()
   }  
   return false;
 }
+
+void ShieldCommunicator::sendLine(String line)
+{
+  _shieldcomm->println(line);
+}
