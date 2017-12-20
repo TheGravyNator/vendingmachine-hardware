@@ -29,13 +29,13 @@ QueueList <struct SodaRequest> queue;
 WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 JSONParser jsonparser;
 ArduinoCommunicator arduinocomm;
-WifiServer server(80, jsonparser);
+WifiServer server(SERVER_PORT, jsonparser, &queue);
 MDNSHandler mdns;
 
 void setup()
 {
-  Serial.begin(115200);
-  arduinocomm.beginSerial(new SoftwareSerial(13, 12), 9600);
+  Serial.begin(BAUD_RATE);
+  arduinocomm.beginSerial(new SoftwareSerial(RX_SERIAL, TX_SERIAL), BAUD_RATE);
   connection.wifiConnect();
   server.setArduinoCommunicator(arduinocomm);
   server.startServer();
