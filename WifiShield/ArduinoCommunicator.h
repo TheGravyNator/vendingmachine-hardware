@@ -11,7 +11,7 @@ class ArduinoCommunicator
   public:
   ArduinoCommunicator();
   void beginSerial(SoftwareSerial* serial, int baud);
-  void sendOrder(String message);
+  void sendOrder(SodaRequest order);
   private:
   SoftwareSerial* _arduinocomm;
 };
