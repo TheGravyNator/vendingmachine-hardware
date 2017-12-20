@@ -23,7 +23,8 @@ void WifiServer::startServer()
     }
     struct SodaRequest request = _jsonparser.parseJSON(_espserver.arg("plain"));
     _espserver.send(200, "text/plain", "Body received!");
-    _arduinocomm.sendOrder((String)request.soda_type + ":" + (String)request.soda_amount);
+    SodaRequest order = {(String)request.soda_type, (int)request.soda_amount};
+    _queue->push(order);
   });
   _espserver.begin();
 }
