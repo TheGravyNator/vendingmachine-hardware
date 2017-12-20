@@ -15,9 +15,11 @@ void ArduinoCommunicator::beginSerial(SoftwareSerial* serial, int baud)
   _arduinocomm->begin(baud);
 }
 
+void ArduinoCommunicator::setDispensingIndicator(DispensingIndicator* dispensing)
 {
-  _arduinocomm->println(message);
-  Serial.println(message);
+  _dispensing = dispensing;
+}
+
 void ArduinoCommunicator::sendOrder(SodaRequest order)
 {
   _arduinocomm->println(order.soda_type + ":" + order.soda_amount);

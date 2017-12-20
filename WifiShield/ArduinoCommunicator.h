@@ -11,9 +11,11 @@ class ArduinoCommunicator
   public:
   ArduinoCommunicator();
   void beginSerial(SoftwareSerial* serial, int baud);
+  void setDispensingIndicator(DispensingIndicator* dispensing);
   void sendOrder(SodaRequest order);
   private:
   SoftwareSerial* _arduinocomm;
+  DispensingIndicator* _dispensing;
 };
 
 #endif
