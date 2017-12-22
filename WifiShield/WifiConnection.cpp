@@ -7,6 +7,7 @@ WifiConnection::WifiConnection(char* ssid, char* password)
 {
   _wifissid = ssid;
   _wifipassword = password;
+  pinMode(16, OUTPUT);
 }
 
 void WifiConnection::wifiConnect()
@@ -20,6 +21,7 @@ void WifiConnection::wifiConnect()
   {
     delay(500);
     Serial.print(".");
+    digitalWrite(16, LOW);
   }
 
   Serial.println("");
@@ -27,4 +29,5 @@ void WifiConnection::wifiConnect()
   Serial.println(_wifissid);
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
+  digitalWrite(16, HIGH);
 }
