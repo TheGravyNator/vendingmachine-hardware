@@ -9,7 +9,7 @@ class DispensingIndicator
   DispensingIndicator(int pin);
   void init();
   bool getIndicator();
-  private:  
+  private:
   int _pin;
 };
 
