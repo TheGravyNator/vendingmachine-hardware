@@ -20,35 +20,35 @@ void OrderHandler::executeOrder(struct SodaRequest request)
   {
     for(int i = 0; i < request.soda_amount; i++)
     {
-      _relay1->trigger(DELAY_AMOUNT);
+      _relay1->trigger(DELAY_AMOUNT_UP, DELAY_AMOUNT_DOWN);
     }
   }
   else if(request.soda_type == "colazero")
   {
     for(int i = 0; i < request.soda_amount; i++)
     {
-      _relay2->trigger(DELAY_AMOUNT);
+      _relay2->trigger(DELAY_AMOUNT_UP, DELAY_AMOUNT_DOWN);
     }
   }
   else if(request.soda_type == "sparood")
   {
     for(int i = 0; i < request.soda_amount; i++)
     {
-      _relay3->trigger(DELAY_AMOUNT);
+      _relay3->trigger(DELAY_AMOUNT_UP, DELAY_AMOUNT_DOWN);
     }
   }
   else if(request.soda_type == "icetea")
   {
     for(int i = 0; i < request.soda_amount; i++)
     {
-      _relay4->trigger(DELAY_AMOUNT);
+      _relay4->trigger(DELAY_AMOUNT_UP, DELAY_AMOUNT_DOWN);
     }
   }
   else if(request.soda_type == "sinas")
   {
     for(int i = 0; i < request.soda_amount; i++)
     {
-      _relay5->trigger(DELAY_AMOUNT);
+      _relay5->trigger(DELAY_AMOUNT_UP, DELAY_AMOUNT_DOWN);
     }
   }
 }

@@ -7,7 +7,8 @@
 #define RELAY4_HI 12
 #define RELAY4_LO 13
 #define RELAY5 3
-#define DELAY_AMOUNT 2500
+#define DELAY_AMOUNT_UP 3000
+#define DELAY_AMOUNT_DOWN 8000
 
 #define RX_SERIAL 10
 #define TX_SERIAL 11

@@ -8,7 +8,7 @@ class Relay
   public:
   Relay(int pin);
   void init();
-  void trigger(int delay_amount);
+  void trigger(int delay_amount_up, int delay_amount_down);
   private:
   int _pin;
 };
