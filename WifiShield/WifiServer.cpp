@@ -3,7 +3,6 @@
 #include "JSONParser.h"
 #include "SodaRequest.h"
 #include "QueueList.h"
-#include <SoftwareSerial.h>
 
 WifiServer::WifiServer(int serverport, JSONParser jsonparser, QueueList <struct SodaRequest>* queue) 
 {

@@ -6,7 +6,6 @@
 #include "SodaRequest.h"
 #include "QueueList.h"
 #include <ESP8266WebServer.h>
-#include <SoftwareSerial.h>
 
 class WifiServer
 {
