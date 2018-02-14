@@ -21,7 +21,7 @@ void WifiConnection::wifiConnect()
   {
     delay(500);
     Serial.print(".");
-    digitalWrite(16, LOW);
+    //digitalWrite(16, LOW);
   }
 
   Serial.println("");
@@ -29,5 +29,5 @@ void WifiConnection::wifiConnect()
   Serial.println(_wifissid);
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
-  digitalWrite(16, HIGH);
+  //digitalWrite(16, HIGH);
 }
