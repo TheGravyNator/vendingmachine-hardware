@@ -3,6 +3,12 @@
 #define RX_SERIAL 13
 #define TX_SERIAL 12
 
-#define DISPENSING_INDICATOR 4
+#define DISPENSING_INDICATOR 5
+
+#define SLOT_1_STOCK 2
+#define SLOT_2_STOCK 4
+#define SLOT_3_STOCK 14 
+#define SLOT_4_STOCK 15
+#define SLOT_5_STOCK 16
 
 #define BAUD_RATE 9600
