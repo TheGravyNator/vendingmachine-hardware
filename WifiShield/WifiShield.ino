@@ -1,4 +1,4 @@
- /**
+  /**
  *  Name: WifiShield.ino
  *  Purpose: The main code for the Wifi shield of the 23G vending machine project.
  *  It establishes connection with the API and communicates with the arduino to control the vending machine.
@@ -21,6 +21,7 @@
 #include "ArduinoCommunicator.h"
 #include "WifiServer.h"
 #include "JSONParser.h"
+#include "StockCheck.h"
 #include "QueueList.h"
 #include "Constants.h"
 
@@ -28,11 +29,11 @@ QueueList <struct SodaRequest> queue;
 
 WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 JSONParser jsonparser;
-WifiServer server(SERVER_PORT, jsonparser, &queue);
+StockCheck stockcheck;
+WifiServer server(SERVER_PORT, jsonparser, &queue, stockcheck);
 MDNSHandler mdns;
 DispensingIndicator dispensing(DISPENSING_INDICATOR);
 ArduinoCommunicator arduinocomm;
-
 void setup()
 {
   Serial.begin(BAUD_RATE);
