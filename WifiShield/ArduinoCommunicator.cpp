@@ -22,5 +22,5 @@ void ArduinoCommunicator::setDispensingIndicator(DispensingIndicator* dispensing
 
 void ArduinoCommunicator::sendOrder(SodaRequest order)
 {
-  _arduinocomm->println(order.soda_type + ":" + order.soda_amount);
+  _arduinocomm->println(order.slot + ":" + order.soda_amount);
 }

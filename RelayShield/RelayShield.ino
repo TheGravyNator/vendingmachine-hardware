@@ -46,7 +46,7 @@ void loop()
   if(shieldcomm.incoming())
   {
     order = shieldcomm.receiveOrder();
-    if(order.soda_type != "" && order.soda_amount != 0)
+    if(order.slot != "" && order.soda_amount != 0)
     {
       dispensing.setIndicator(true);
       orderhandler.executeOrder(order); 

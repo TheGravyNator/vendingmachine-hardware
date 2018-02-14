@@ -5,7 +5,7 @@
 
 struct SodaRequest 
 {
-  String soda_type;  
+  String slot;  
   int soda_amount;
 };
 

@@ -16,35 +16,35 @@ void OrderHandler::init(RelayHiLo* relay1, RelayHiLo* relay2, RelayHiLo* relay3,
 
 void OrderHandler::executeOrder(struct SodaRequest request)
 {
-  if(request.soda_type == "cola")
+  if(request.slot == "slot_1")
   {
     for(int i = 0; i < request.soda_amount; i++)
     {
       _relay1->trigger(DELAY_AMOUNT_UP, DELAY_AMOUNT_DOWN);
     }
   }
-  else if(request.soda_type == "colazero")
+  else if(request.slot == "slot_2")
   {
     for(int i = 0; i < request.soda_amount; i++)
     {
       _relay2->trigger(DELAY_AMOUNT_UP, DELAY_AMOUNT_DOWN);
     }
   }
-  else if(request.soda_type == "sparood")
+  else if(request.slot == "slot_3")
   {
     for(int i = 0; i < request.soda_amount; i++)
     {
       _relay3->trigger(DELAY_AMOUNT_UP, DELAY_AMOUNT_DOWN);
     }
   }
-  else if(request.soda_type == "icetea")
+  else if(request.slot == "slot_4")
   {
     for(int i = 0; i < request.soda_amount; i++)
     {
       _relay4->trigger(DELAY_AMOUNT_UP, DELAY_AMOUNT_DOWN);
     }
   }
-  else if(request.soda_type == "sinas")
+  else if(request.slot == "slot_5")
   {
     for(int i = 0; i < request.soda_amount; i++)
     {
