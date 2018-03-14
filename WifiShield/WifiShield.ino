@@ -21,7 +21,6 @@
 #include "ArduinoCommunicator.h"
 #include "WifiServer.h"
 #include "JSONParser.h"
-#include "StockCheck.h"
 #include "QueueList.h"
 #include "Constants.h"
 
@@ -29,8 +28,7 @@ QueueList <struct SodaRequest> queue;
 
 WifiConnection connection(SECRET_SSID, SECRET_PASSWORD);
 JSONParser jsonparser;
-StockCheck stockcheck;
-WifiServer server(SERVER_PORT, jsonparser, &queue, stockcheck);
+WifiServer server(SERVER_PORT, jsonparser, &queue);
 MDNSHandler mdns;
 DispensingIndicator dispensing(DISPENSING_INDICATOR);
 ArduinoCommunicator arduinocomm;
